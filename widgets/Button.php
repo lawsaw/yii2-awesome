@@ -8,7 +8,7 @@ use yii\base\Widget;
 
 
 
-class Buttontest extends Widget {
+class Button extends Widget {
 
     public $theme;
     public $size;
@@ -49,7 +49,7 @@ class Buttontest extends Widget {
             'model' => $this->model,
             'onclick' => $this->onclick,
         ];
-        return $this->render('buttontest', $options);
+        return $this->render('button', $options);
     }
 }
 

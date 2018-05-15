@@ -1,3 +1,8 @@
+<?php
+use lawsaw\widgets\Svg;
+?>
+
+
 <div class="buttonAwesome <?= $size ? 'buttonAwesome--'.$size : '' ?> <?= $theme ? 'buttonAwesome--'.$theme : '' ?> <?= $className ? $className : '' ?>">
 
 
@@ -36,7 +41,10 @@
                     <?php
                     break;
                 case 'svg':
-
+                    echo Svg::widget([
+                        'icon' => $iconBefore['value'],
+                        'className' => 'test-name',
+                    ]);
                     break;
                 case 'fa':
                     ?>
@@ -85,7 +93,10 @@
                     <?php
                     break;
                 case 'svg':
-                  
+                    echo Svg::widget([
+                        'icon' => $iconAfter['value'],
+                        'className' => 'test-name',
+                    ]);
                     break;
                 case 'fa':
                     ?>
