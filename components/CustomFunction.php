@@ -79,11 +79,11 @@ function validCaptcha($model, $attribute, $message)
             return true;
         }
         else {
-            return $model->addError($attribute , $message->confirm_again );
+            return $model->addError($attribute , $message['confirm_again'] );
         }
     }
     else
     {
-        return $model->addError($attribute , $message->confirm );
+        return $model->addError($attribute , $message['confirm'] );
     }
 }
