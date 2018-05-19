@@ -8,7 +8,7 @@
 
 namespace lawsaw\controllers;
 
-
+use Yii;
 use yii\web\Controller;
 
 class ModalController extends Controller
@@ -47,7 +47,7 @@ class ModalController extends Controller
         if($message == 'false') {
 
             if (file_exists(\Yii::getAlias('@frontend') . "/views/modals/$modal.php")) {
-                return $this->renderPartial('//layouts/layout-modal', $data);
+                return $this->renderFile('@lawsaw/layouts/layout-modal.php', $data);
             } else {
                 echo json_encode([
                     'status' => 'error'
@@ -56,7 +56,7 @@ class ModalController extends Controller
 
         } else {
 
-            return $this->renderPartial('//layouts/layout-modal', $data);
+            return $this->renderFile('@lawsaw/layouts/layout-modal.php', $data);
 
         }
 
