@@ -46,13 +46,21 @@ class ModalController extends Controller
 
         if($message == 'false') {
 
-            if (file_exists("@frontend/views/modals/$modal.php")) {
+            if (file_exists(\Yii::getAlias('@frontend') . "/views/modals/$modal.php")) {
                 return $this->renderFile('@lawsaw/layouts/layout-modal.php', $data);
             } else {
                 echo json_encode([
                     'status' => 'error'
                 ]);
             }
+
+//            if (file_exists(\Yii::getAlias('@frontend') . "/views/modals/$modal.php")) {
+//                return $this->renderPartial('//layouts/layout-modal', $data);
+//            } else {
+//                echo json_encode([
+//                    'status' => 'error'
+//                ]);
+//            }
 
         } else {
 

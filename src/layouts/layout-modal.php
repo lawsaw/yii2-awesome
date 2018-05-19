@@ -12,7 +12,7 @@
                 </a>
             </div>
             <div class="modalAwesome-content">
-                <?= $message != 'false' ? $message : $this->render($contentView , $contentData) ?>
+                <?= $message != 'false' ? $message : $this->render("@frontend/views/modals/".$contentView , $contentData) ?>
             </div>
         </div>
     </div>
