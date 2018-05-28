@@ -2,7 +2,7 @@
 namespace lawsaw\widgets;
 use Yii;
 use yii\base\Widget;
-use common\models\Lang;
+use lawsaw\models\Lang;
 
 class Language extends \yii\bootstrap\Widget
 {
