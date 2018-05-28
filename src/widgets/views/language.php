@@ -28,6 +28,6 @@ foreach ($langs as $lang) {
         'value' => 'buttonAwesome-icon-image--arrow arrow-xs-right',
     ],
     'biasLeft' => true,
-    'list' => $langArray
+    'content' => $langArray
 ]);
 ?>

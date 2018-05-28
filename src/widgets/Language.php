@@ -19,7 +19,7 @@ class Language extends \yii\bootstrap\Widget
             'frontTheme' => $this->frontTheme,
             'backTheme' => $this->backTheme,
         ];
-        return $this->render('wlang',[
+        return $this->render('language',[
             'current' => Lang::getCurrent(),
             'langs' => Lang::find()->where('id != :current_id', [':current_id' => Lang::getCurrent()->id])->all(),
             'options' => $options,
