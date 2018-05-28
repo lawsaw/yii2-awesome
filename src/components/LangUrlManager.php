@@ -5,11 +5,11 @@
  * foreign bicycle =)
  */
 
-namespace frontend\components;
+namespace lawsaw\components;
 
 
 use yii\web\UrlManager;
-use common\models\Lang;
+use lawsaw\models\Lang;
 
 class LangUrlManager extends UrlManager
 {

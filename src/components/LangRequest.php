@@ -5,12 +5,12 @@
  * foreign bicycle =)
  */
 
-namespace frontend\components;
+namespace lawsaw\components;
 
 
 use yii\web\Request;
 use Yii;
-use common\models\Lang;
+use lawsaw\models\Lang;
 
 class LangRequest extends Request
 {
