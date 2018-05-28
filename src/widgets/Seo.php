@@ -8,7 +8,7 @@ use yii\base\Widget;
 
 
 
-class OpenGraph extends Widget {
+class Seo extends Widget {
 
     public $title;
     public $description;
