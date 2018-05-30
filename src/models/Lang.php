@@ -94,8 +94,10 @@ class Lang extends \yii\db\ActiveRecord
     //Получения объекта языка по умолчанию
     static function getDefaultLang()
     {
-        return Lang::find()->where('`default` = :default', [':default' => 1])->one();
+        //return Lang::find()->where('`default` = :default', [':default' => 1])->one();
         //return Lang::find()->where('"default" = :default', [':default' => 1])->one();
+        //return Lang::find()->where(['default' => ':default'], [':default' => 1])->one();
+        return Lang::find()->where(['default' => 1])->one();
     }
 
     //Получения объекта языка по буквенному идентификатору
@@ -104,7 +106,8 @@ class Lang extends \yii\db\ActiveRecord
         if ($url === null) {
             return null;
         } else {
-            $language = Lang::find()->where('`url` = :url', [':url' => $url])->one();
+            //$language = Lang::find()->where('url = :url', [':url' => $url])->one();
+            $language = Lang::find()->where(['url' => $url])->one();
             if ( $language === null ) {
                 return null;
             }else{
