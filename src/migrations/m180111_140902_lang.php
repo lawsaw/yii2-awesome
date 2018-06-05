@@ -1,5 +1,6 @@
 <?php
 
+use lawsaw\models\Lang;
 use yii\db\Migration;
 use yii\db\pgsql\Schema;
 
@@ -18,7 +19,7 @@ class m180111_140902_lang extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%lang}}', [
+        $this->createTable(Lang::tableName(), [
             'id' => Schema::TYPE_PK,
             'url' => Schema::TYPE_STRING . '(255) NOT NULL',
             'local' => Schema::TYPE_STRING . '(255) NOT NULL',
@@ -40,7 +41,7 @@ class m180111_140902_lang extends Migration
     public function safeDown()
     {
         //echo "m180111_140902_lang cannot be reverted.\n";
-        $this->dropTable('{{%lang}}');
+        $this->dropTable(Lang::tableName());
 
         return false;
     }
