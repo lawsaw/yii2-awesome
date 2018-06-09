@@ -9,7 +9,7 @@ namespace lawsaw\components;
 
 
 use yii\web\UrlManager;
-use lawsaw\models\Lang;
+use lawsaw\common\models\Lang;
 
 class LangUrlManager extends UrlManager
 {

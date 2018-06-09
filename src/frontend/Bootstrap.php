@@ -10,6 +10,6 @@ class Bootstrap implements BootstrapInterface{
          * Регистрация модуля в приложении
          * (вместо указания в файле frontend/config/main.php
          */
-        $app->setModule('lawsaw', 'lawsaw\Module');
+        $app->setModule('lawsaw-front', 'lawsaw\frontend\Module');
     }
 }
