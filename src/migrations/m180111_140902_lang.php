@@ -29,7 +29,7 @@ class m180111_140902_lang extends Migration
             'date_create' => Schema::TYPE_INTEGER . ' NOT NULL',
         ], $tableOptions);
 
-        $this->batchInsert(Lang::tableName(), ['url', 'local', 'name', 'default', 'date_update', 'date_create'], [
+        $this->batchInsert('lang', ['url', 'local', 'name', 'default', 'date_update', 'date_create'], [
             ['en', 'en-EN', 'English', 0, time(), time()],
             ['ru', 'ru-RU', 'Русский', 1, time(), time()],
         ]);

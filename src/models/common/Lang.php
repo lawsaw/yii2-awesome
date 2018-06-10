@@ -1,6 +1,6 @@
 <?php
 
-namespace lawsaw\models;
+namespace lawsaw\models\common;
 
 use Yii;
 

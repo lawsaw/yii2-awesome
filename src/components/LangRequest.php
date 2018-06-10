@@ -10,7 +10,7 @@ namespace lawsaw\components;
 
 use yii\web\Request;
 use Yii;
-use lawsaw\common\models\Lang;
+use lawsaw\models\common\Lang;
 
 class LangRequest extends Request
 {

@@ -6,7 +6,7 @@
  * Time: 11:53 AM
  */
 
-namespace lawsaw\controllers;
+namespace lawsaw\controllers\frontend;
 
 use Yii;
 use yii\web\Controller;
@@ -47,7 +47,7 @@ class ModalController extends Controller
         if($message == 'false') {
 
             if (file_exists(\Yii::getAlias('@frontend') . "/views/modals/$modal.php")) {
-                return $this->renderFile('@lawsaw/frontend/views/layouts/layout-modal.php', $data);
+                return $this->renderFile('@lawsaw/views/frontend/layouts/layout-modal.php', $data);
             } else {
                 echo json_encode([
                     'status' => 'error'
@@ -64,7 +64,7 @@ class ModalController extends Controller
 
         } else {
 
-            return $this->renderFile('@lawsaw/frontend/views/layouts/layout-modal.php', $data);
+            return $this->renderFile('@lawsaw/views/frontend/layouts/layout-modal.php', $data);
 
         }
 
