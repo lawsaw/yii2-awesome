@@ -1,6 +1,6 @@
 <?php
 
-use lawsaw\models\Lang;
+use lawsaw\models\common\Lang;
 use yii\db\Migration;
 use yii\db\pgsql\Schema;
 
