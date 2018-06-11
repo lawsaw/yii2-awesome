@@ -111,17 +111,17 @@ class m180601_080225_blog extends Migration
         ], $tableOptions);
 
 
-        $this->createIndex('FK_tag', TagPost::tableName(), 'tag_id');
-        $this->addForeignKey(
-            'FK_tag_post', TagPost::tableName(), 'tag_id', Tags::tableName(), 'id', 'SET NULL', 'CASCADE'
-        );
-
-
         $this->createTable(TagPost::tableName(), [
             'id' => $this->primaryKey(),
             'tag_id' => $this->integer(),
             'post_id' => $this->integer()
         ], $tableOptions);
+
+
+        $this->createIndex('FK_tag', TagPost::tableName(), 'tag_id');
+        $this->addForeignKey(
+            'FK_tag_post', TagPost::tableName(), 'tag_id', Tags::tableName(), 'id', 'SET NULL', 'CASCADE'
+        );
 
 
         $this->createIndex('FK_post', TagPost::tableName(), 'post_id');
