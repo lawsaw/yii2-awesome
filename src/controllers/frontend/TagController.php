@@ -12,6 +12,7 @@ use lawsaw\models\common\Category;
 use lawsaw\models\common\Tags;
 use Yii;
 use yii\web\Controller;
+use frontend\controllers\AppController;
 
 /**
  * Контроллер "Тэги".

@@ -11,6 +11,7 @@ namespace lawsaw\controllers\frontend;
 use lawsaw\models\common\Category;
 use Yii;
 use yii\web\Controller;
+use frontend\controllers\AppController;
 
 /**
  * Контроллеры "Категорий".

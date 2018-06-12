@@ -14,11 +14,12 @@ use Yii;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\User;
+use frontend\controllers\AppController;
 
 /**
  * Контроллер "Комментарий".
  */
-class CommentController extends Controller
+class CommentController extends AppController
 {
     public function actionAdd()
     {

@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php
 foreach ($posts->models as $post) {
-    echo $this->render('//post/shortView', [
+    echo $this->render('@lawsaw/views/frontend/post/shortView.php', [
         'model' => $post
     ]);
 }

@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
     foreach ($posts->models as $postTag) {
-        echo $this->render('//post/shortView', [
+        echo $this->render('@lawsaw/views/frontend/post/shortView.php', [
             'model' => $postTag->getPost()->one()
         ]);
     }
@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <ul>
         <?php
         foreach ($categories->models as $tagItem) {
-            echo $this->render('//category/shortViewCategory', [
+            echo $this->render('@lawsaw/views/frontend/category/shortViewCategory.php', [
                 'model' => $tagItem
             ]);
         }

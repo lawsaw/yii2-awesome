@@ -9,6 +9,7 @@ use lawsaw\models\common\Post;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use frontend\controllers\AppController;
 
 /**
  * Контролеры "Постов".

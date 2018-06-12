@@ -10,8 +10,9 @@ namespace lawsaw\controllers\frontend;
 
 use Yii;
 use yii\web\Controller;
+use frontend\controllers\AppController;
 
-class ModalController extends Controller
+class ModalController extends AppController
 {
     public function actionIndex($modal, $mode , $animIn, $animOut, $workClass, $ajax, $message, $model, $contentData = [])
     {

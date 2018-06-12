@@ -5,8 +5,8 @@
  * Date: 09.07.14
  * Time: 9:26
  */
-use common\models\Comment;
-use common\models\TagPost;
+use lawsaw\models\common\Comment;
+use lawsaw\models\common\TagPost;
 use yii\helpers\Html;
 
 /* @var $model common\models\Post */
