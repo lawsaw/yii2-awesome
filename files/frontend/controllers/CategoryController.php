@@ -2,12 +2,12 @@
 //namespace frontend\controllers\user;
 namespace frontend\controllers;
 
-use lawsaw\controllers\frontend\PostController as BaseModalController;
+use lawsaw\controllers\frontend\CategoryController as BaseModalController;
 
 use Yii;
 use yii\web\Controller;
 
-class PostController extends BaseModalController
+class CategoryController extends BaseModalController
 {
 
     public $layout = 'layout-main';

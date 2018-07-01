@@ -3,10 +3,10 @@ return [
 
     '/' => 'site/index',
 
-    'news' => 'lawsaw/frontend/post/index',
-    'news/<id:\d+>' => 'lawsaw/frontend/post/view',
-    'news/category/<id:\d+>' => 'lawsaw/frontend/category/view',
-    'news/tag/<id:\d+>' => 'lawsaw/frontend/tag/view',
+    'news' => 'post/index',
+    'news/<id:\d+>' => 'post/view',
+    'news/category/<id:\d+>' => 'category/view',
+    'news/tag/<id:\d+>' => 'tag/view',
 
     'modal' => 'lawsaw/frontend/modal/index',
 

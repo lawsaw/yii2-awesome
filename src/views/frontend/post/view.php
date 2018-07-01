@@ -50,8 +50,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php endforeach; ?>
 </div>
 
-<?= Html::a('refer', ['site/refer']) ?>
-
 <?php if (Yii::$app->user->isGuest) { ?>
 
     Вы можете оставить комментарий после <?= Html::a('авторизации', ['site/login']) ?> или, если у вас нет аккаунта, <?= Html::a('создайте его', ['site/signup']) ?>
@@ -60,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 } else {
 
-    $this->render('@lawsaw/views/frontend/comment/_form.php', [
+    echo $this->render('@lawsaw/views/frontend/comment/_form.php', [
         'model' => $commentForm
     ]);
 
