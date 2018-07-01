@@ -1,5 +1,15 @@
 <?php
 return [
+
+    '/' => 'site/index',
+
+    'news' => 'lawsaw/frontend/post/index',
+    'news/<id:\d+>' => 'lawsaw/frontend/post/view',
+    'news/category/<id:\d+>' => 'lawsaw/frontend/category/view',
+    'news/tag/<id:\d+>' => 'lawsaw/frontend/tag/view',
+
+    'modal' => 'lawsaw/frontend/modal/index',
+
 //    '/' => 'site/index',
 //    [
 //        'pattern' => 'news',
@@ -17,15 +27,11 @@ return [
 //        'suffix' => '.html',
 //    ],
 
-
-
-
 //    '/' => 'site/index',
 //    'modal' => 'lawsaw/modal',
 
 //    '' => 'site/index',
 //    '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
-
 
 //    [
 //        'pattern' => 'about',
@@ -38,30 +44,9 @@ return [
 //        'suffix' => '.html',
 //    ],
 
+//'<_c:[\w\-]+>/<id:\d+>' => '<_c>/view',
+//'<_c:[\w\-]+>' => '<_c>/index',
+//'<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_c>/<_a>',
 
-    '/' => 'site/index',
-
-
-
-   'modal' => 'lawsaw/frontend/modal/index',
-
-    [
-        'pattern' => 'news',
-        'route' => 'post/index',
-    ],
-    [
-        'pattern' => 'news/<id:\d+>',
-        'route' => 'post/view',
-    ],
-
-    [
-        'pattern' => '<action>',
-        'route' => 'site/<action>'
-    ],
-
-    //'<_c:[\w\-]+>/<id:\d+>' => '<_c>/view',
-    //'<_c:[\w\-]+>' => '<_c>/index',
-    //'<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_c>/<_a>',
-
-    //'<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+//'<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
 ];

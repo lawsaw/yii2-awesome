@@ -35,7 +35,7 @@ class TagController extends AppController
             'pageSize' => Yii::$app->params['pageSize']
         ]);
 
-        return $this->render('@lawsaw/views/frontend/post/view.php', [
+        return $this->render('@lawsaw/views/frontend/tag/view.php', [
             'tag' => $tag,
             'posts' => $posts,
             'categories' => $categoryModel->getCategories()
