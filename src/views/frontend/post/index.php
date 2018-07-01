@@ -15,7 +15,7 @@ use yii\widgets\LinkPager;
 
     <?php
     foreach ($posts->models as $post) {
-        echo $this->render('shortView', [
+        echo $this->render('@lawsaw/views/frontend/post/shortView.php', [
             'model' => $post
         ]);
     }

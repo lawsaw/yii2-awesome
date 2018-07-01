@@ -41,7 +41,7 @@ foreach ($posts->models as $post) {
     <ul>
     <?php
     foreach ($categories->models as $category) {
-        echo $this->render('shortViewCategory', [
+        echo $this->render('@lawsaw/views/frontend/category/shortViewCategory.php', [
             'model' => $category
         ]);
     }

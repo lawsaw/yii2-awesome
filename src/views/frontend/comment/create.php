@@ -16,7 +16,7 @@ use yii\helpers\Html;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form', [
+    <?= $this->render('@lawsaw/views/frontend/comment/_form.php', [
         'model' => $model,
     ]) ?>
 

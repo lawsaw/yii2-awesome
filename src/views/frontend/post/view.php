@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <h1><?= $model->title ?></h1>
 
 <div class="meta">
-    <p><?= Yii::t('frontend', 'Author')?>: <?= $model->author->username ?> <?= Yii::t('frontend', 'Publish date')?>: <?= $model->publish_date ?> <?= Yii::t('frontend', 'Category') ?>: <?= Html::a($model->category->title, ['frontend/category/view', 'id' => $model->category->id]) ?></p>
+    <p><?= Yii::t('frontend', 'Author')?>: <?= $model->author->username ?> <?= Yii::t('frontend', 'Publish date')?>: <?= $model->publish_date ?> <?= Yii::t('frontend', 'Category') ?>: <?= Html::a($model->category->title, ['category/view', 'id' => $model->category->id]) ?></p>
 </div>
 
 <div>
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
     $tags = [];
     foreach($model->getTagPost()->all() as $postTag) {
         $tag = $postTag->getTag()->one();
-        $tags[] = Html::a($tag->title, ['frontend/tag/view', 'id' => $tag->id]);
+        $tags[] = Html::a($tag->title, ['tag/view', 'id' => $tag->id]);
     } ?>
 
     <?= Yii::t('frontend', 'Tags') ?>: <?= implode($tags, ', ') ?>
@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 } else {
 
-    $this->render('../comment/_form', [
+    $this->render('@lawsaw/views/frontend/comment/_form.php', [
         'model' => $commentForm
     ]);
 
