@@ -90,6 +90,7 @@ class Category extends ActiveRecord
                     'category_id' => $this->id,
                     'publish_status' => Post::STATUS_PUBLISH
                 ])
+                ->orderBy(['publish_date' => SORT_DESC])
         ]);
     }
 
