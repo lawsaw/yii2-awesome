@@ -57,6 +57,7 @@ use lawsaw\models\common\Lang;
     <?php
     foreach(Lang::getLangList() as $key => $lang) {
         $tabItems[] = [
+            'active' => $key === "ru",
             'label' => $lang,
             'content' => $this->renderAjax('_language_form', [
                 'form' => $form,

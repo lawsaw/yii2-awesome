@@ -49,7 +49,7 @@ class PostController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Post::find(),
+            'query' => Post::find()->orderBy(['publish_date' => SORT_DESC]),
         ]);
 
         return $this->render('@lawsaw/views/backend/post/index.php', [
