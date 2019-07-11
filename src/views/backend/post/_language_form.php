@@ -13,14 +13,18 @@ use dosamigos\tinymce\TinyMce;
 <?= $form->field($model, 'description'.$lang)->textarea(['rows' => 3]) ?>
 <?= $form->field($model, 'anons'.$lang)->textarea(['rows' => 6]) ?>
 
-<?= $form->field($model, 'content'.$lang)->textarea(['rows' => 20])->widget(TinyMce::className(), [
-    'options' => ['rows' => 20],
+<?= $form->field($model, 'content'.$lang)->textarea(['rows' =>50])->widget(TinyMce::className(), [
+    'options' => ['rows' => 50],
     'language' => 'ru',
     'clientOptions' => [
+        'menu' => [
+            'format' => [],
+        ],
         'plugins' => [
             "autolink link code",
         ],
-        'toolbar' => "undo redo | bold italic | alignleft aligncenter alignright | bullist numlist | link image"
+        'toolbar' => "styleselect | alignleft aligncenter alignright | undo redo | link image | code"
+        //https://www.tiny.cloud/docs/advanced/editor-control-identifiers/#toolbarcontrols
     ]
 ]) ?>
 
